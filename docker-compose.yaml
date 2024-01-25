@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+    store-rabbit:
+        image: rabbitmq:3-management
+        container_name: store-rabbit
+        ports:
+            - 5672
+            - 15672
+        environment:
+            RABBITMQ_DEFAULT_USER: "store"
+            RABBITMQ_DEFAULT_PASS: "store"    
+    store-sql:
+        image: mcr.microsoft.com/mssql/server:2017-latest
+        container_name: store-sql
+        ports:
+          - 1433:1433
+        expose:
+            - 1433
+        environment:
+            SA_PASSWORD: "MyDB@123"
+            ACCEPT_EULA: "Y"          
