@@ -20,7 +20,23 @@
       "dotnetRunMessages": true,
       "applicationUrl": "https://localhost:7016;http://localhost:5265"
     },
-    "IIS Express": {
+    "IIS - Development": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS - Staging": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS - Production": {
       "commandName": "IISExpress",
       "launchBrowser": true,
       "launchUrl": "swagger",
